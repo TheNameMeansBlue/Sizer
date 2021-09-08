@@ -39,8 +39,7 @@ class SizerUtil {
     if (kIsWeb) {
       deviceType = DeviceType.web;
     } else if (Platform.isAndroid || Platform.isIOS) {
-      if ((orientation == Orientation.portrait && width < 600) ||
-          (orientation == Orientation.landscape && height < 600)) {
+      if (width < 500) {
         deviceType = DeviceType.mobile;
       } else {
         deviceType = DeviceType.tablet;
